@@ -22,11 +22,7 @@ A shopping cart feature enables users to review selected items before purchase.
 Optimized for both desktop and mobile devices for a consistent shopping experience.
  Cross-browser compatibility ensures smooth performance across platforms.
 ## **Technologies Used**
-### **Frontend**
 - HTML, CSS, JavaScript – Core technologies for building the UI.
 - React.js – For an interactive and responsive user experience.
 - Bootstrap/Tailwind CSS – For a clean and modern layout.
-### **Backend**
-- Node.js & Express.js – Backend framework for API handling.
-- MongoDB / Firebase – Database for storing user data and product details.
-- JWT Authentication – Ensuring secure user login and transactions.
+
