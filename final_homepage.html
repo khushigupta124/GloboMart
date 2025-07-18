@@ -51,27 +51,35 @@
               </li>
               <li>
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                <a href="#">Wishlist</a>
+                <a href="products.php">Product Catalog</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <a href="logout.php">Logout</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <a href="wishlist.html">Wishlist</a>
               </li>
               <li>
                 <i class="fa-solid fa-photo-film"></i>
-                <a href="#">Cart</a>
+                <a href="cart.html">Cart</a>
               </li>
               <li>
                 <i class="fa-solid fa-calendar-days"></i>
-                <a href="#">Order History</a>
+                <a href="order_history.html">Order History</a>
               </li>
               <li>
                 <i class="fa-solid fa-store"></i>
-                <a href="#">About us</a>
+                <a href="about_us.html">About us</a>
               </li>
               <li>
                 <i class="fa-solid fa-phone"></i>
-                <a href="#">Contact</a>
+                <a href="contact.html">Contact</a>
               </li>
               <li>
                 <i class="fa-regular fa-comments"></i>
-                <a href="#">Feedback</a>
+                <a href="feedback.html">Feedback</a>
               </li>
             </ul>
         </div>          
@@ -107,27 +115,31 @@
     </div>
 </div>
 </div>
-<!-- first div -->
-<form action="http://localhost:3000">
-    <div class="first_block">
-        <h2>Discover, Shop, Delight</h2>
-        <p>Your one-stop shop for all your needs, with easy browsing, secure transactions, and fast delivery.</p>
-        <button class="test_now">SHOP NOW</button>
-    </div>
-</form>
+<div class="main-content">
+  <form action="index.html">
+      <div class="first_block">
+          <h2>Discover, Shop, Delight</h2>
+          <p>Your one-stop shop for all your needs, with easy browsing, secure transactions, and fast delivery.</p>
+          <button class="test_now">SHOP NOW</button>
+      </div>
 
-<!-- second div -->
-
-<div class="second_div">
-  <h2>NEW COLLECTION</h2>
-  <div class="container">
-    <div class="listProduct">
-    </div>
-  </div>
+      <div class="second_div">
+        <h2>NEW COLLECTION</h2>
+        <div class="container">
+            <header>
+                <!-- Removed PRODUCT LIST title -->
+            </header>
+            <div class="listProduct">
+                <!-- Products will be loaded here by app.js or PHP -->
+            </div>
+        </div>
+      </div>
+  </form>
+</div>
 <div class="cartTab">
     <h1>Shopping Cart</h1>
     <div class="listCart">
-        
+        <!-- Cart items will be loaded here by app.js -->
     </div>
     <div class="btn">
         <button class="close">CLOSE</button>
@@ -135,10 +147,9 @@
     </div>
 </div>
 <!-- fourth block -->
-
-<div class="footer">
-    <p>GLOBO MART | Manipal University Jaipur | Web Tech Project</p>
-</div>
+<footer class="footer">
+    <p>&copy; 2024 Globomart. All rights reserved.</p>
+</footer>
 
 <script src="app.js"></script>
 </body>
