@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart - Globomart</title>
+    <link rel="stylesheet" href="final_homepage.css">
+    <style>
+        .cart-table {
+            width: 90%;
+            margin: 40px auto;
+            border-collapse: collapse;
+            background: #181c1f;
+            color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+        }
+        .cart-table th, .cart-table td {
+            padding: 16px 12px;
+            text-align: center;
+        }
+        .cart-table th {
+            background: #222;
+            color: #a3e635;
+        }
+        .cart-table tr:not(:last-child) {
+            border-bottom: 1px solid #333;
+        }
+        .cart-table img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .checkout-btn {
+            display: block;
+            margin: 30px auto 0 auto;
+            padding: 14px 40px;
+            background: #28a745;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .checkout-btn:hover {
+            background: #176c2a;
+        }
+    </style>
+    <script>
+    function goToCheckout() {
+        window.location.href = 'checkout.html';
+    }
+    </script>
+</head>
+<body>
+    <div class="main-content">
+        <h2 style="text-align:center;margin-top:40px;">Your Shopping Cart</h2>
+        <table class="cart-table">
+            <tr>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td><img src="1.png" alt="Classic Club Chair"></td>
+                <td>Classic Club Chair</td>
+                <td>₹12,999</td>
+                <td>1</td>
+                <td>₹12,999</td>
+            </tr>
+            <tr>
+                <td><img src="9.png" alt="Contemporary Grey Sofa Set"></td>
+                <td>Contemporary Grey Sofa Set</td>
+                <td>₹39,999</td>
+                <td>2</td>
+                <td>₹79,998</td>
+            </tr>
+        </table>
+        <button class="checkout-btn" onclick="goToCheckout()">Proceed to Checkout</button>
+    </div>
+</body>
+</html> 

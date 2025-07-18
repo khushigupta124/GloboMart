@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout - Globomart</title>
+    <link rel="stylesheet" href="final_homepage.css">
+    <style>
+        .checkout-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #181c1f;
+            color: #fff;
+            border-radius: 10px;
+            padding: 32px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+        }
+        .checkout-container h2 {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .cart-summary {
+            margin-bottom: 32px;
+        }
+        .cart-summary table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 12px;
+        }
+        .cart-summary th, .cart-summary td {
+            padding: 10px 8px;
+            text-align: left;
+        }
+        .cart-summary th {
+            color: #a3e635;
+        }
+        .cart-summary tr:not(:last-child) {
+            border-bottom: 1px solid #333;
+        }
+        .cart-summary img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        .checkout-form label {
+            color: #a3e635;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .checkout-form input, .checkout-form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: none;
+            font-size: 1rem;
+            margin-bottom: 16px;
+        }
+        .place-order-btn {
+            width: 100%;
+            padding: 14px 0;
+            background: #28a745;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .place-order-btn:hover {
+            background: #176c2a;
+        }
+    </style>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+    // Load cart from localStorage and display summary
+    function formatRupees(amount) {
+        return '₹' + Number(amount).toLocaleString('en-IN');
+    }
+    let grandTotal = 0;
+    function loadCartSummary() {
+        const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        fetch('products.json')
+            .then(res => res.json())
+            .then(products => {
+                let tbody = document.getElementById('cart-summary-body');
+                grandTotal = 0;
+                tbody.innerHTML = '';
+                cart.forEach(item => {
+                    const product = products.find(p => p.id == item.product_id);
+                    if (product) {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `<td><img src="${product.image}"/></td><td>${product.name}</td><td>${formatRupees(product.price)}</td><td>${item.quantity}</td><td>${formatRupees(product.price * item.quantity)}</td>`;
+                        tbody.appendChild(row);
+                        grandTotal += product.price * item.quantity;
+                    }
+                });
+                document.getElementById('cart-total').innerText = formatRupees(grandTotal);
+            });
+    }
+    window.onload = loadCartSummary;
+    </script>
+</head>
+<body>
+    <div class="checkout-container">
+        <h2>Checkout</h2>
+        <div class="cart-summary">
+            <table>
+                <thead>
+                    <tr><th>Image</th><th>Product</th><th>Price</th><th>Qty</th><th>Total</th></tr>
+                </thead>
+                <tbody id="cart-summary-body">
+                    <!-- Cart items will be loaded here -->
+                </tbody>
+            </table>
+            <div style="text-align:right;font-size:1.1rem;font-weight:600;">Grand Total: <span id="cart-total">₹0</span></div>
+        </div>
+        <form class="checkout-form">
+            <label for="address">Shipping Address</label>
+            <textarea id="address" required placeholder="Enter your full address"></textarea>
+            <label for="phone">Phone Number</label>
+            <input id="phone" type="tel" required placeholder="Enter your phone number">
+            <button type="button" class="place-order-btn" onclick="showPaymentOptions()">Place Order</button>
+        </form>
+        <div id="payment-section" style="display:none;margin-top:32px;text-align:center;">
+            <!-- Payment options will be shown here -->
+        </div>
+    </div>
+    <script>
+    function showPaymentOptions() {
+        document.querySelector('.checkout-form').style.display = 'none';
+        document.getElementById('payment-section').style.display = 'block';
+        if (grandTotal > 0) {
+            document.getElementById('payment-section').innerHTML = `
+                <h3>Select Payment Method</h3>
+                <button type="button" onclick="payWithRazorpay()" style="padding:14px 40px;margin:24px 0;background:#3399cc;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:1.1rem;cursor:pointer;transition:background 0.2s;">Pay with Razorpay</button>
+            `;
+        } else {
+            document.getElementById('payment-section').innerHTML = `<h3>Your cart is empty. Please add items to cart before checkout.</h3>`;
+        }
+    }
+    function fakePayment() {
+        document.getElementById('payment-section').innerHTML = '<h3>Payment Successful! Thank you for your order.</h3>';
+        localStorage.removeItem('cart');
+    }
+    function payWithRazorpay() {
+        var address = document.getElementById('address').value || 'N/A';
+        var phone = document.getElementById('phone').value || 'N/A';
+        var options = {
+            "key": "rzp_test_1DP5mmOlF5G5ag", // Demo Razorpay key
+            "amount": grandTotal * 100, // Amount in paise
+            "currency": "INR",
+            "name": "Globomart",
+            "description": "Order Payment",
+            "handler": function (response){
+                document.getElementById('payment-section').innerHTML = '<h3>Payment Successful! Razorpay Payment ID: ' + response.razorpay_payment_id + '</h3>';
+                localStorage.removeItem('cart');
+            },
+            "prefill": {
+                "name": "Globomart Customer",
+                "email": "customer@example.com",
+                "contact": phone
+            },
+            "notes": {
+                "address": address
+            },
+            "theme": {
+                "color": "#3399cc"
+            }
+        };
+        var rzp1 = new Razorpay(options);
+        rzp1.open();
+    }
+    </script>
+</body>
+</html> 
