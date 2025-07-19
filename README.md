@@ -40,29 +40,37 @@
 ├── app.js                      # Frontend interactivity (cart, etc.)
 ├── images/                     # Folder for product images
 </pre>
+
 ---
 
 ## 🖼 Interface Previews
 
+### 🏠 Home Page
+
+<p align="center">
+  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output1.png" alt="Home Page 1" width="33%"/>
+  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output2.png" alt="Home Page 2" width="33%"/>
+  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output3.png" alt="Home Page 3" width="33%"/>
+</p>
+
+---
+
 ### 📝 Sign Up Page
 ![Sign Up Page](https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output%2010.png)
+
+---
 
 ### 🔐 Login Page
 ![Login Page](https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output%209.png)
 
-### 🏠 Home Page
-
-<p align="center">
-  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output1.png" alt="Home Page" width="30%"/>
-  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output2.png" alt="Home Page" width="30%"/>
-  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output3.png" alt="Home Page" width="30%"/>
-</p>
+---
 
 ### 🛒 Shopping Cart
 ![Shopping Cart](https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output5.png)
+
+---
 
 ### 💳 Checkout Page
 ![Checkout Page](https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output7.png)
 
 ---
-
