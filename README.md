@@ -25,7 +25,7 @@
 ---
 
 ## 📁 File Structure
-```bash
+<pre>
 📦 GloboMart/
 ├── final_homepage.html         # Main landing page
 ├── final_login_page.html       # Login page
@@ -39,7 +39,7 @@
 ├── final_homepage.css          # Styling file
 ├── app.js                      # Frontend interactivity (cart, etc.)
 ├── images/                     # Folder for product images
-
+</pre>
 ---
 
 ## 🖼 Interface Previews
