@@ -45,24 +45,24 @@
 ## 🖼 Interface Previews
 
 ### 📝 Sign Up Page
-![Sign Up Page](interface_screenshots/output10.png)
+![Sign Up Page](interface_screenshots/output 10.png)
 
 ### 🔐 Login Page
-![Login Page](interface_screenshots/output9.png)
+![Login Page](interface_screenshots/output 9.png)
 
 ### 🏠 Home Page
 
 <p align="center">
-  <img src="interface_screenshots/output1.png" alt="Home Page" width="30%"/>
-  <img src="interface_screenshots/output2.png" alt="Home Page" width="30%"/>
-  <img src="interface_screenshots/output3.png" alt="Home Page" width="30%"/>
+  <img src="interface_screenshots/output 1.png" alt="Home Page" width="30%"/>
+  <img src="interface_screenshots/output 2.png" alt="Home Page" width="30%"/>
+  <img src="interface_screenshots/output 3.png" alt="Home Page" width="30%"/>
 </p>
 
 ### 🛒 Shopping Cart
-![Shopping Cart](interface_screenshots/output5.png)
+![Shopping Cart](interface_screenshots/output 5.png)
 
 ### 💳 Checkout Page
-![Checkout Page](interface_screenshots/output7.png)
+![Checkout Page](interface_screenshots/output 7.png)
 
 ---
 
