@@ -1,4 +1,4 @@
-# 🌐 GloboMart Web Application
+# 🌐🛒 GloboMart Web Application
 ---
 
 ## 📝 Overview
@@ -48,9 +48,9 @@
 ### 🏠 Home Page
 
 <p align="center">
-  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output1.png" alt="Home Page 1" width="33%" style="height: 200px;"/>
-  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output2.png" alt="Home Page 2" width="33%" style="height: 200px;"/>
-  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output3.png" alt="Home Page 3" width="33%" style="height: 200px;"/>
+  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output1.png" alt="Home Page 1" width="33%" style="height: 180px;"/>
+  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output2.png" alt="Home Page 2" width="33%" style="height: 180px;"/>
+  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output3.png" alt="Home Page 3" width="33%" style="height: 180px;"/>
 </p>
 
 ---
