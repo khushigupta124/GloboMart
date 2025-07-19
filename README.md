@@ -27,18 +27,27 @@
 ## 📁 File Structure
 <pre>
 📦 GloboMart/
-├── final_homepage.html         # Main landing page
-├── final_login_page.html       # Login page
-├── register.php                # User registration logic
-├── login.php                   # User login handling
-├── logout.php                  # Logout logic
-├── products.php                # Product catalog display
-├── product_detail.php          # Single product detail view
-├── admin.php                   # Admin panel with CRUD
-├── products.json               # Product data (if not using MySQL)
-├── final_homepage.css          # Styling file
-├── app.js                      # Frontend interactivity (cart, etc.)
-├── images/                     # Folder for product images
+├── about_us.html             # About Us page
+├── app.js                    # Frontend interactivity (cart logic)
+├── cart.html                 # Shopping cart page
+├── checkout.html             # Checkout/payment page
+├── contact.html              # Contact form page
+├── feedback.html             # User feedback form
+├── final_homepage.html       # Main landing page
+├── final_login_page.html     # Login form page
+├── final_signpage.html       # Signup form page
+├── index.html                # Landing alias
+├── interface_screenshots/    # UI preview screenshots
+├── images/                   # Product/media images
+├── login.php                 # Backend login logic
+├── logout.php                # Logout session handler
+├── order_history.html        # Order history interface
+├── product_detail.php        # Single product detail view
+├── products.json             # Product data source
+├── products.php              # Dynamic product listing
+├── register.php              # User registration backend
+├── test.php                  # Testing/debug page
+├── wishlist.html             # Wishlist interface
 </pre>
 
 ---
