@@ -48,29 +48,41 @@
 ### 🏠 Home Page
 
 <p align="center">
-  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output1.png" alt="Home Page 1" width="33%"/>
-  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output2.png" alt="Home Page 2" width="33%"/>
-  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output3.png" alt="Home Page 3" width="33%"/>
+  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output1.png" alt="Home Page 1" width="33%" style="height: 220px;"/>
+  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output2.png" alt="Home Page 2" width="33%" style="height: 220px;"/>
+  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output3.png" alt="Home Page 3" width="33%" style="height: 220px;"/>
 </p>
 
 ---
 
 ### 📝 Sign Up Page
-![Sign Up Page](https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output%2010.png)
+
+<p align="center">
+  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output%2010.png" alt="Sign Up Page" width="60%"/>
+</p>
 
 ---
 
 ### 🔐 Login Page
-![Login Page](https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output%209.png)
+
+<p align="center">
+  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output%209.png" alt="Login Page" width="60%"/>
+</p>
 
 ---
 
 ### 🛒 Shopping Cart
-![Shopping Cart](https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output5.png)
+
+<p align="center">
+  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output5.png" alt="Shopping Cart" width="60%"/>
+</p>
 
 ---
 
 ### 💳 Checkout Page
-![Checkout Page](https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output7.png)
+
+<p align="center">
+  <img src="https://github.com/khushigupta124/GloboMart/blob/main/interface_screenshots/output7.png" alt="Checkout Page" width="60%"/>
+</p>
 
 ---
